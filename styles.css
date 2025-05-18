@@ -20,10 +20,10 @@ header {
 .title-header {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .title-header .logo{
-    width: 36px;
+    width: 48px;
     height: auto;
 }
