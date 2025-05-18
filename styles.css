@@ -1,7 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-color: #a3d5ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
 }
