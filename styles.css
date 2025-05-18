@@ -16,3 +16,8 @@ header {
     color: #333333;
     font-weight: bold;
 }
+
+.title-header .logo{
+    width: 64px;
+    height: auto;
+}
