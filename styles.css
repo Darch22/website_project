@@ -17,7 +17,13 @@ header {
     font-weight: bold;
 }
 
-.title-header .logo{
-    width: 64px;
+.title-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo{
+    width: 24px;
     height: auto;
 }
