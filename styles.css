@@ -11,7 +11,7 @@ header {
     padding: 20px;
 }
 
-.nav-links {
+.nav-links a{
     text-decoration: none;
     color: #333333;
     font-weight: bold;
