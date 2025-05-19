@@ -70,3 +70,7 @@ footer {
     border-color: #a8e6cf;
     border-style: solid;
 }
+
+.container h1 {
+    text-align: center;
+}
