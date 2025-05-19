@@ -27,6 +27,7 @@ main {
 footer {
     background-color: #a8e6cf;
     padding: 20px;
+    margin-top: 32px;
 }
 
 .nav-links a{
