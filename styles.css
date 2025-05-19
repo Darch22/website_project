@@ -48,6 +48,10 @@ footer {
     gap: 10px;
 }
 
+.title-header h1 {
+    font-family: 'Fredoka', sans-serif;
+}
+
 .title-header .logo{
     width: 48px;
     height: auto;
