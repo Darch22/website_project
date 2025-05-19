@@ -27,7 +27,6 @@ main {
 footer {
     background-color: #a8e6cf;
     padding: 20px;
-    margin-top: 32px;
 }
 
 .nav-links a{
@@ -66,6 +65,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 64px;
+    margin-bottom: 32px;
     border-radius: 12px;
     border-color: #a8e6cf;
     border-style: solid;
