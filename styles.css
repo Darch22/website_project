@@ -64,6 +64,9 @@ footer {
     height: 200px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 64px;
     border-radius: 12px;
     border-color: #a8e6cf;
+    border-width: 10px;
+    border-style: dashed;
 }
