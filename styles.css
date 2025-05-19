@@ -43,6 +43,10 @@ footer {
   color: #666666;
 }
 
+.nac-links a:hover {
+    color: #f7c5cc;
+}
+
 .title-header {
     display: flex;
     align-items: center;
