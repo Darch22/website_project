@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    gap: 10px;
+    gap: 20px;
 }
 
 main {
@@ -72,7 +72,7 @@ footer {
 .container {
     background-color: #ffffff;
     width: 65%;
-    height: 400px;
+    height: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: 64px;
@@ -91,4 +91,24 @@ footer {
 
 .container.upcoming-list {
     min-height: 40%;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.placeholder p {
+    background-color: grey;
+    color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
