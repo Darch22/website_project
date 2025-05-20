@@ -81,6 +81,8 @@ footer {
 .container h1 {
     text-align: center;
     font-family: 'Fredoka', sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 .container.upcoming-list {
