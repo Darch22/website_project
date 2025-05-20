@@ -89,7 +89,9 @@ footer {
     text-underline-offset: 6px;
 }
 
-.container.upcoming-list {
+.container.upcoming-list, .container.movies-list,
+.container.anime-list, .container.games-list,
+.container.about-page {
     min-height: 40%;
 }
 
