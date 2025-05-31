@@ -36,7 +36,28 @@ footer {
     font-weight: bold;
 }
 
-.nav-links a{
+@media (max-width: 600px) {
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px 20px;
+        text-decoration: underline;
+    }
+
+    .nav-links a {
+        width: 48%;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .nav-links a:not(:first-child)::before {
+        display: none;
+    }
+}
+
+.nav-links a {
     text-decoration: none;
     color: #333333;
     font-weight: bold;
