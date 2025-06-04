@@ -49,10 +49,18 @@ footer {
 
 }
 
+header .nav-links {
+    display: flex;
+}
+
 @media (max-width: 600px) {
     .nav-toggle {
         display: block;
         padding-left: 20px;
+    }
+
+    header .nav-links {
+        display: none;
     }
 
     .nav-links {
