@@ -101,8 +101,8 @@ footer {
     display: none; /* Hide close button on desktop */
     font-size: 30px;
     background: none;
-    background-color: transparent; /* Explicitly set transparent background */
-    border: none;     /* Ensure no border */
+    background-color: transparent !important; /* Ensure transparent background */
+    border: none !important;     /* Ensure no border */
     cursor: pointer;
     color: #333333;
     padding: 0;
@@ -125,7 +125,7 @@ footer {
     }
 
     #menu-toggle.hamburger-hidden {
-        display: none !important; /* Ensure this rule takes precedence on mobile if needed */
+        display: none !important; /* Already important, ensure it stays */
     }
 
     /* Hide original nav links in header on mobile, sidebar takes over */
@@ -136,25 +136,25 @@ footer {
     This rule should target #nav-menu now to initially hide it on mobile before toggle */
 
     #nav-menu { /* Styles for #nav-menu when it becomes a sidebar on mobile */
-        position: fixed;
+        position: fixed !important; /* Ensure fixed positioning */
         top: 0;
         left: 0;
-        height: 100%; /* Use 100% instead of 100vh for potentially better compatibility */
-        width: 250px; /* Adjust as needed */
+        height: 100%; 
+        width: 250px; 
         background-color: #a3d5ff; 
         padding: 20px;
         z-index: 1000;
-        transform: translateX(-100%); 
+        transform: translateX(-100%) !important; /* Ensure it starts off-screen */
         transition: transform 0.3s ease-in-out;
         display: flex; 
         flex-direction: column;
         gap: 15px; 
         align-items: flex-start; 
-        box-sizing: border-box; /* Add box-sizing to prevent padding from increasing width */
+        box-sizing: border-box; 
     }
 
     #nav-menu.sidebar-open {
-        transform: translateX(0); 
+        transform: translateX(0) !important; /* Ensure it slides in */
     }
 
     /* Style for links inside the sidebar */
@@ -172,8 +172,8 @@ footer {
     #close-menu { /* Make close button visible in the sidebar */
         display: block;
         align-self: flex-end; 
-        background-color: transparent; /* Reinforce for mobile state */
-        border: none; /* Reinforce for mobile state */
+        background-color: transparent !important; /* Reinforce for mobile state */
+        border: none !important; /* Reinforce for mobile state */
     }
 
     /* The following desktop-specific styles for header > .nav-links a are not needed here */
