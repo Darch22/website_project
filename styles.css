@@ -38,20 +38,81 @@ footer {
 
 .nav-toggle {
     display: none;
+    z-index: 1001;
 }
-
 
 #menu-toggle {
     font-size: 28px;
     background: none;
     border: none;
     cursor: pointer;
-
 }
 
-header .nav-links {
+/* Style to hide the hamburger icon */
+#menu-toggle.hamburger-hidden {
+    display: none;
+}
+
+/* Sidebar styles */
+/* #nav-menu is the main navigation container for BOTH desktop and mobile */
+#nav-menu {
+    /* Desktop First: Styles for desktop row navigation */
     display: flex;
+    flex-direction: row; /* Default for desktop */
+    align-items: center; /* Align items centrally in a row */
+    gap: 0; /* Reset gap for desktop if not needed, or set specific desktop gap */
+    /* Remove mobile-specific sidebar properties from global #nav-menu scope */
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* height: 100vh; */
+    /* width: 250px; */
+    /* background-color: #a3d5ff; */ /* This might be fine globally if header bg is same */
+    /* padding: 20px; */
+    /* z-index: 1000; */
+    /* transform: translateX(-100%); */
+    /* transition: transform 0.3s ease-in-out; */
 }
+
+/* Styles for links inside #nav-menu (applies to both desktop and sidebar links if structure is same) */
+/* Adjust if desktop links need different styling than sidebar links */
+#nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    /* width: 100%; */ /* Remove for desktop, apply in media query for sidebar */
+    /* padding: 10px 0; */ /* Remove for desktop, apply in media query for sidebar */
+    margin-left: 15px; /* Existing desktop style */
+}
+
+#nav-menu a:not(:first-of-type)::before {
+    /* display: none; */ /* Remove for desktop, apply in media query for sidebar */
+    content: "|"; /* Existing desktop style */
+    margin-right: 15px; /* Existing desktop style */
+    color: #666666; /* Existing desktop style */
+}
+
+#nav-menu a:hover {
+    color: #f7c5cc;
+}
+
+/* Close button style - initially hidden on desktop */
+#close-menu {
+    display: none; /* Hide close button on desktop */
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333333;
+    padding: 0;
+    line-height: 1;
+}
+
+/* header > .nav-links selector is no longer needed as #nav-menu is the primary target */
+/* Commenting out or removing to avoid confusion */
+/* header > .nav-links {
+    display: flex; 
+} */
 
 @media (max-width: 600px) {
     .nav-toggle {
@@ -59,51 +120,60 @@ header .nav-links {
         padding-left: 20px;
     }
 
-    header .nav-links {
-        display: none;
-    }
+    /* Hide original nav links in header on mobile, sidebar takes over */
+    /* This implies #nav-menu itself is hidden first or transformed */
+    /* header > .nav-links { 
+        display: none; 
+    } 
+    This rule should target #nav-menu now to initially hide it on mobile before toggle */
 
-    .nav-links {
-        display: none;
+    #nav-menu { /* Styles for #nav-menu when it becomes a sidebar on mobile */
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px; /* Adjust as needed */
+        background-color: #a3d5ff; /* Same as header or choose new */
+        padding: 20px;
+        z-index: 1000;
+        transform: translateX(-100%); /* Start off-screen */
+        transition: transform 0.3s ease-in-out;
+        display: flex; /* Explicitly set for sidebar state */
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 20px;
-        background-color: #a3d5ff;
+        gap: 15px; /* Spacing for links */
+        align-items: flex-start; /* Align links to the start */
     }
 
-    .nav-links.active {
-        display: flex;
+    #nav-menu.sidebar-open {
+        transform: translateX(0); /* Slide in */
     }
 
-
-    .nav-links a {
-        width: 100%;
-        margin-left: 0;
+    /* Style for links inside the sidebar */
+    #nav-menu a {
+        width: 100%; /* Make links take full width for easier clicking */
+        padding: 10px 0;
+        margin-left: 0; /* Reset desktop margin */
         text-align: left;
     }
 
-    .nav-links a:not(:first-child)::before {
-        display: none;
+    #nav-menu a:not(:first-of-type)::before {
+        display: none; /* Remove the pipe separators in sidebar */
     }
+
+    #close-menu { /* Make close button visible in the sidebar */
+        display: block;
+        align-self: flex-end; /* Position to the top right of the sidebar */
+    }
+
+    /* The following desktop-specific styles for header > .nav-links a are not needed here */
+    /* as #nav-menu a styling is handled above for the sidebar state. */
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #333333;
-    font-weight: bold;
-    margin-left: 15px;
-
-}
-
-.nav-links a:not(:first-child)::before {
-  content: "|";
-  margin-right: 15px;
-  color: #666666;
-}
-
-.nav-links a:hover {
-    color: #f7c5cc;
-}
+/* Desktop-specific styles for links if needed outside media query */
+/* These are now part of the global #nav-menu a styles, verify they are correct */
+/* header > .nav-links a { ... } */
+/* header > .nav-links a:not(:first-child)::before { ... } */
+/* header > .nav-links a:hover { ... } */
 
 .title-header {
     display: flex;

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime | Dante's Media Log</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="./page-script.js"></script>
     <link rel="icon" type="image/png" href="../favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +13,12 @@
 </head>
 <body>
     <header>
-        <section class="nav-links">
+        <section class="nav-toggle">
+            <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        </section>
+
+        <section class="nav-links" id="nav-menu">
+            <button id="close-menu" aria-label="Close menu">&times;</button>
             <a href="../index.html">Home</a>
             <a href="./games.html">Games</a>
             <a href="./anime.html">Anime</a>
@@ -38,5 +42,6 @@
     <footer>
         <p>&copy; 2025 Dante's Media Log.</p>
     </footer>
+    <script src="./page-script.js"></script>
 </body>
 </html>
