@@ -147,12 +147,6 @@ footer {
     }
 }
 
-/* Desktop-specific styles for links if needed outside media query */
-/* These are now part of the global #nav-menu a styles, verify they are correct */
-/* header > .nav-links a { ... } */
-/* header > .nav-links a:not(:first-child)::before { ... } */
-/* header > .nav-links a:hover { ... } */
-
 .title-header {
     display: flex;
     align-items: center;
